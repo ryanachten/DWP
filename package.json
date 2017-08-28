@@ -21,7 +21,8 @@
     "start": "node index",
     "dev": "DEBUG=ghost:* grunt dev",
     "test": "grunt validate --verbose",
-    "init": "yarn global add knex-migrator ember-cli grunt-cli && yarn install && grunt symlink && grunt init || true"
+    "init": "yarn global add knex-migrator ember-cli grunt-cli && yarn install && grunt symlink && grunt init || true",
+    "install": "grunt init prod"
   },
   "engines": {
     "node": "^4.5.0 || ^6.9.0"

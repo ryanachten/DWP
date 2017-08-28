@@ -1,15 +1,21 @@
 {
-  "url": "http://localhost:2368/",
+  "url": "https://dwp-ghost.herokuapp.com/",
+  "fileStorage": false,
   "server": {
-    "port": 2368,
-    "host": "127.0.0.1"
+    "port": "process.env.PORT",
+    "host": "0.0.0.0"
   },
   "database": {
-    "client": "sqlite3",
-    "connection": {
-      "filename": "/Users/ryanachten/Desktop/GhostCliInstallTest/content/data/ghost-local.db"
-    }
+  "client": "postgres",
+  "connection": {
+    "host": "process.env.POSTGRES_HOST",
+    "user": "process.env.POSTGRES_USER",
+    "password": "process.env.POSTGRES_PASSWORD",
+    "database": "process.env.POSTGRES_DATABASE",
+    "port": 5432
   },
+  "debug": false
+},
   "mail": {
     "transport": "Direct"
   },

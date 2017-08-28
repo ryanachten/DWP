@@ -1,13 +1,21 @@
 {
-    "database": {
-        "client": "mysql",
-        "connection": {
-            "host"     : "127.0.0.1",
-            "user"     : "root",
-            "password" : "",
-            "database" : "ghost"
-        }
+  "url": "https://dwp-ghost.herokuapp.com/",
+  "fileStorage": false,
+  "server": {
+    "port": "process.env.PORT",
+    "host": "0.0.0.0"
+  },
+  "database": {
+    "client": "postgres",
+    "connection": {
+      "host": "process.env.POSTGRES_HOST",
+      "user": "process.env.POSTGRES_USER",
+      "password": "process.env.POSTGRES_PASSWORD",
+      "database": "process.env.POSTGRES_DATABASE",
+      "port": 5432
     },
+  "debug": false
+},
     "auth": {
         "type": "password"
     },

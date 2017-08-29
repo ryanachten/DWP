@@ -1,10 +1,11 @@
 {
-    "url": "https://dwp-ghost.herokuapp.com/",
-    "fileStorage": false,
+    "url": "http://localhost:2368",
     "database": {
-      "client": "pg",
-      "connection": "process.env.DATABASE_URL",
-      "debug": false
+        "client": "sqlite3",
+        "connection": {
+            "filename": "content/data/ghost-dev.db"
+        },
+        "debug": false
     },
     "auth": {
         "type": "password"

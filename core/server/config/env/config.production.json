@@ -1,13 +1,14 @@
 {
-    "database": {
-        "client": "mysql",
-        "connection": {
-            "host"     : "127.0.0.1",
-            "user"     : "root",
-            "password" : "",
-            "database" : "ghost"
-        }
-    },
+  "database": {
+  "client": "postgres",
+  "connection": {
+      "host": "process.env.POSTGRES_HOST",
+      "user": "process.env.POSTGRES_USER",
+      "password": "process.env.POSTGRES_PASS",
+      "database": "process.env.POSTGRES_DB",
+      "port": "process.env.POSTGRES_PORT"
+  }
+},
     "auth": {
         "type": "password"
     },
